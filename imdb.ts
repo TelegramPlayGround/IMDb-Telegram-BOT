@@ -1,6 +1,5 @@
 import { InlineQueryResult, InlineQueryResultButton } from "mtkruto/mod.ts";
 import { urlFetchEr } from "./page.ts";
-import { PackTitleInvalid } from "mtkruto/3_errors.ts";
 
 export interface SearchResult {
   "#TITLE": string;
@@ -65,8 +64,10 @@ export async function SearchIMDb(
         description: `${result["#AKA"]} | ${result["#RANK"]} | ${
           result["#ACTORS"]
         }`,
-        // caption: `<a href='${result["#IMDB_URL"]}'>${result["#TITLE"]} ${result["#YEAR"]}</a>`,
-        // parse_mode: "HTML",
+        caption: `<a href='${result["#IMDB_URL"]}'>${result["#TITLE"]} ${
+          result["#YEAR"]
+        }</a>`,
+        parseMode: "HTML",
         replyMarkup: {
           inlineKeyboard: [
             [
