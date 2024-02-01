@@ -1,13 +1,13 @@
 {
-    "tasks": {
-        "start": "deno run --allow-net --allow-read --allow-env main.ts"
-    },
-    "importMap": "./import_map.json",
-    "fmt": {
-        "useTabs": false,
-        "lineWidth": 80,
-        "indentWidth": 4,
-        "singleQuote": false,
-        "proseWrap": "preserve"
-    }
+  "tasks": {
+    "start": "deno run --allow-net --allow-read --allow-env main.ts"
+  },
+  "importMap": "./import_map.json",
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "singleQuote": false,
+    "proseWrap": "preserve"
+  }
 }
