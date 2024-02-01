@@ -1,4 +1,4 @@
-## Experiment with MtKruto
+## Experiment with MTKruto
 
 Rename the `.env.sample` file to `.env`
 

@@ -1,6 +1,5 @@
-// load environment variables
-import { load } from "std/dotenv/mod.ts";
-await load({ export: true });
+import "std/dotenv/load.ts"; // load environment variables
+import { Client, StorageLocalStorage } from "mtkruto/mod.ts";
 
 // strings used in the bot
 const NO_QS_INLINE_MESG = Deno.env.get("NO_QS_INLINE_MESG") as string;
@@ -12,8 +11,6 @@ const BOT_SESSION = Deno.env.get("BOT_SESSION") || "bot";
 const TG_API_ID = parseInt(Deno.env.get("API_ID") || "0");
 const TG_API_HASH = Deno.env.get("API_HASH");
 const TG_BOT_TOKEN = Deno.env.get("BOT_TOKEN");
-
-import { Client, StorageLocalStorage } from "mtkruto/mod.ts";
 
 console.log("Starting Bot Client");
 const botClient = new Client(
