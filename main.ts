@@ -81,8 +81,7 @@ botClient.on("chosenInlineResult", async (ctx) => {
   const resultIdStp = resultId.split(" ");
   if (resultIdStp.length === 4) {
     const IMDbResponse = await GetIMDb(resultIdStp[3]);
-    await botClient.editInlineMessageText(
-      inlineMessageId,
+    await ctx.editInlineMessageText(
       IMDbResponse.text,
       {
         parseMode: "HTML",
